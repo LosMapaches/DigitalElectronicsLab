@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- Mirrored from www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/StudentLabs/lschultz/Lab3/Lab3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2017 17:59:24 GMT -->
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title></title><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style></head><body style="color: rgb(0, 0, 0); background-color: rgb(255, 230, 204);" alink="#000099" link="#000099" vlink="#990099">
+<span style="font-family: Comic Sans MS;">ENGR338 Lab 2017
+Fall</span><span style="font-family: &quot;Comic Sans MS&quot;;"></span><br>
+
+<span style="font-family: Comic Sans MS;">
+Name:&nbsp; Lane Schultz<br>
+
+<br>
+
+</span>
+<div style="text-align: center;"><big style="font-weight: bold;"><big><big><span style="font-family: &quot;Comic Sans MS&quot;;">Lab 3: The Inverter/IV Characteristics of NMOS/PMOS</span></big></big></big><br>
+</div>
+
+<span style="font-family: Comic Sans MS;"><br>
+</span><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><br>
+</font></font><span style="font-family: Comic Sans MS;"></span><span style="font-family: Comic Sans MS;"></span><span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big>Introduction:<small><small><span style="font-weight: bold;"></span></small></small></big></big></span><br><br>
+Operation regions for transistors include cut-off, reverse active, forward active, and
+saturation regions. For digital circuits, cut-off and saturation
+regions are used to create logic. Part of this laboratory focuses on the logic produced by an inverter circuit (example below).<br>
+<br>
+<div style="text-align: center;"><img style="width: 644px; height: 687px;" alt="" src="Images/Inverter.png"><br>
+Figure 1: A inverting circuit implementing pMOS and nMOS is shown.<br>
+VIN is an input signal and VOUT is the output. VNEG = 0 V and VPOS = 5 V.<br>
+<br>
+</div>
+<br>
+An inverter is a type of circuit used to invert an input signal. If the
+input to an inverter is 5 V the output will be 0 V and vice versa. The
+5 V can be described as a high input while the 0 V can be described as
+a low input. However, there exists a range of input where the output is
+neither high or low because both pMOS and nMOS components are operating
+in saturation mode. The point at which both the output voltage and the
+input voltage are equal is called the switching point.<br>
+<br>
+<div style="text-align: center;"><img style="width: 778px; height: 359px;" alt="" src="Images/Switch.png"><br>
+Figure 2: Output voltage (V(n002)) with respect to input voltage (V(n001)) are shown.<br>
+<br>
+</div>
+Because of the physical limiations of transistors, there exists a time
+delay between input and output signals. We can quantify the delay as
+the high to low (tPHL) and low to high (tPLH) propagation delays. The values are
+measured at 50% of the input and output signals. Below is a sample
+visual for delays.<br>
+<br>
+<div style="text-align: center;"><img style="width: 310px; height: 269px;" alt="" src="Images/Delay.png"><br>
+Figure 3: An example of delay times is shown above. (From <a href="../../../../../../../www.learnabout-electronics.org/Digital/images/propagation-delay.gif">learnabout-electronics.org</a>)<br>
+<br>
+</div>
+Because of the operation modes of transistors, usefull information can
+be attained from ID Vs. VGS and ID Vs. VDS graphs. In an ID Vs. VDS
+graph, the saturation region can be seen when ID becomes constant with
+respect to VDS. ID Vs. VGS graphs display how the drain current can
+increase with respect to increasing gate to source voltage.<br>
+<span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big><br>
+Equipment:</big></big><br>
+
+</span><p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: left;">
+</p>
+<ul>
+<li>Function Generator</li><li>Oscilloscope</li><li>Breadboard</li><li>LTspice</li><li>Resistor: 9.95 kilo-ohms</li>
+  <li>Capacitor: 54 pF</li>
+  <li>Transistors: CD4007<br>
+  </li>
+
+</ul>
+
+<span style="font-family: Comic Sans MS;"><br>
+
+<big style="font-weight: bold;"><big>Procedure:<big><br>
+</big></big></big></span><span style="font-family: Comic Sans MS;"><br>
+The delay times of an inverter build using a CD4007 chip were measured.
+The general schematic shown in Figure 1 was used with a 54 pF capacitor
+attached from the output to ground. A 1 kHz square wave with a 5 Vpp
+was used as an input. The square wave was offset by +2.5 V to ensure
+the range of the input was 0 V to 5 V. This was done to show how the
+inverter operates when an input is high (5 V) or low (0 V).</span> If
+the the offset is not provided, then the input and output signals will
+not match well for logic based operations. The switching point was
+measured by changing the input voltage with a DC source until the
+output voltage was equal to the input. This measurement was done with a
+multimeter and not an oscilloscope because an oscilloscope measures in
+the time domain. As seen in Figure 2, the input and output are measured
+with respect to each other. Time is not part of the measurement.<br>
+<span style="font-family: Comic Sans MS;"></span><span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big><br>
+Results:<br>
+<span style="font-weight: bold;"><span style="font-weight: bold;"><span style="font-weight: bold;"></span></span></span></big></big><big><big><span style="font-weight: bold;"></span></big></big><big style="font-weight: bold;"><big><span style="font-weight: bold;"><span style="font-weight: bold;"></span></span></big></big><big><big><small><small>The tPHL and tPLH were measured to be 16.4 ns and 37.2 ns respectively. </small></small></big></big></span><span style="font-family: Comic Sans MS;"><big><big><small><small>The switching point for the inverter was measured to be 2.18 V</small></small></big></big><big><big>.<br>
+&nbsp;<small><small><span style="font-weight: bold;"></span></small></small></big></big></span><span style="font-family: Comic Sans MS;"><big><big> 
+</big></big></span>
+<div style="text-align: center;"><span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big><img style="width: 480px; height: 234px;" alt="" src="Images/TEK00000.png"></big></big></span><br>
+Figure 4: tPHL is shown above.<br>
+<br>
+<span style="font-family: Comic Sans MS;"></span></div>
+<div style="text-align: center;"><span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big><img style="width: 480px; height: 234px;" alt="" src="Images/TEK00002.png"></big></big></span><br>
+Figure 5: tPLH is shown above.<br>
+<br>
+<span style="font-family: Comic Sans MS;"></span></div>
+<div style="text-align: center;"><span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big><img style="width: 480px; height: 234px;" alt="" src="Images/TEK00004.png"></big></big></span><br>
+Figure 6: ID Vs. VGS (0 &lt; VGS &lt; 5 V) with VDS = 5 V is shown above.<br>
+<br>
+<span style="font-family: Comic Sans MS;"></span></div>
+<div style="text-align: center;"><span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big><img style="width: 480px; height: 234px;" alt="" src="Images/TEK00006.png"></big></big></span><br>
+Figure 7: ID Vs. VDS (0 &lt; VDS &lt; 5 V) with VG = 5 V is shown above.<br>
+<br>
+<span style="font-family: Comic Sans MS;"></span></div>
+<span style="font-family: Comic Sans MS;"></span><br>
+<br>
+<br>
+<br>
+<br>
+
+</body>
+<!-- Mirrored from www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/StudentLabs/lschultz/Lab3/Lab3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2017 17:59:43 GMT -->
+</html>

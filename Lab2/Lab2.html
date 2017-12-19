@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- Mirrored from www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/StudentLabs/lschultz/Lab2/Lab2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2017 17:55:26 GMT -->
+<head>
+
+
+
+
+
+
+
+
+
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title></title><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style></head><body style="color: rgb(0, 0, 0); background-color: rgb(255, 230, 204);" alink="#000099" link="#000099" vlink="#990099">
+<span style="font-family: Comic Sans MS;">ENGR338 Lab 2017
+Fall</span><span style="font-family: &quot;Comic Sans MS&quot;;"></span><br>
+
+<span style="font-family: Comic Sans MS;">
+Name:&nbsp; Lane Schultz<br>
+
+<br>
+
+</span>
+<div style="text-align: center;"><big style="font-weight: bold;"><big><big><span style="font-family: &quot;Comic Sans MS&quot;;">Lab 2: Compensated Probe for Digital Signal Probing</span></big></big></big><br>
+</div>
+
+<span style="font-family: Comic Sans MS;"><br>
+<big style="font-weight: bold;"><big>Preliminary Work:<br>
+</big></big></span><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><br>
+The following are pre-lab simulation scripts allong with results:<br>
+<br>
+</font></font>
+<div style="text-align: center;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><img style="width: 799px; height: 852px;" alt="" src="Images/model1.png"></font></font><br>
+<font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">
+</font></font></div>
+<div style="text-align: center;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><img style="width: 799px; height: 852px;" alt="" src="Images/model2.png"></font></font><br>
+<font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">
+</font></font></div>
+<div style="text-align: center;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><img style="width: 799px; height: 852px;" alt="" src="Images/model3.png"></font></font><br>
+</div>
+<font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">
+<br>
+</font></font><span style="font-family: Comic Sans MS;"></span><span style="font-family: Comic Sans MS;"></span><span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big>Introduction:<small><small><span style="font-weight: bold;"></span></small></small></big></big></span><br>
+
+
+
+	
+	
+	
+	
+
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%;">
+<font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">This
+laboratory explores the effect of probe compensation versus
+non-compensation. Basically, probe compensation for an oscilloscope
+allows for the rise time of an input voltage to be faster. This is important for high speed measurements. However,
+there is a considerable attenuation of the signal. This attenuation
+factor can be calculated for and compensated for by the equipment. This is
+why some oscilloscope probes have the options for 1x, 10x, and/or 100x
+compenation for the signal attenuation based on probe charcateristics.
+Basically, the signal gets multiplied by a factor to display what the
+signal should be. Probes allow for change in internal capacitance for
+adjustment of rise
+time. Modifing the internal capacitance can yield overcompensation,
+undercompensation, or correctly compensated readings. Shown below are examples of different compensated signals.</font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%;"><br>
+</p>
+
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><img style="width: 480px; height: 234px;" alt="" src="Images/Over_Compensated.png"></font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">Figure 1: Displayed above is a signal that is overcompensated by the oscilloscope probe.<br>
+</font></font></p>
+<font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"></font></font><br>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"><img style="width: 480px; height: 234px;" alt="" src="Images/Under_Compensated.png"></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">Figure 2: Displayed </font></font><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">above </font></font><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">is a signal that is undercompensted by the oscilloscope probe.</font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"><img style="width: 480px; height: 234px;" alt="" src="Images/Critical_Compensated.png"><br>
+</p>
+
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"></p><p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">Figure 3: Displayed </font></font><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">above</font></font><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"> is a signal that is compensated correctly by the oscilloscope probe.</font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"><br>
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: left;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">A
+relationship for attenuation for the signal can be determined for a
+probe. The appendix (Pages 3 and 6) shows releveant circuit
+calculations. For a 10x compensated probe, the output voltage should be
+1/10 of the input voltage. This is why a mulitple of 10 is applied for
+the compensated probe used in this laboratory. The attenuation is a
+result of trying to increase the responce time of measurment devices.<br>
+<br>
+</font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: left;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">The
+delay time was defined in Lab 1: Spice/RC Circuit for Digital Signal.
+The following relationship can be used to define the delay time
+theoretically:</font></font></p>
+
+
+
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: left;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><br>
+</font></font></p>
+
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><big><big>t=-RCln(0.5)</big></big><br>
+</font></font></p>
+
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: left;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><br>
+</font></font></p>
+
+<font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">In
+the previous equation, R represents the resistance, C is the
+capacitance, and t is the delay time. We can use this calculation to
+attain capacitance from a measured delay time and resistor in an RC
+circuit. </font></font>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: left;"><span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big>Equipment:</big></big><br>
+
+</span>
+</p>
+<ul>
+<li>Function Generator</li><li>Oscilloscope</li><li>Oscilloscope probe with compensation</li><li>Osiclloscope probe without compensation<br>
+  </li><li>Breadboard</li><li>LTspice</li><li>Resistor: 98.3 kilo-ohms<span style="color: rgb(34, 34, 34); font-family: Roboto,arial,sans-serif; font-size: small; font-style: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"></span></li>
+</ul>
+
+<span style="font-family: Comic Sans MS;"><br>
+
+<big style="font-weight: bold;"><big>Procedure:<br>
+</big></big><br>The variable capacitance of a probe was altered to view
+the effects of overcompensation, undercompesation, and correct
+compensation. Additionally, a square wave with a peak-to-peak voltage
+of 2V and a frequency of 1 kHz was used to find the delay time for a
+compensated versus non-compensated probes.</span>
+Delay times for the compensated probe was also determined for maximum
+and minimum delay time settings with respect to altered capacitance. An
+RC circuit containing the probe as the capacitor in series with a 98.3
+kilo-ohm resistor was used to measure the capacitance of the
+compensated probe experimentally.
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: left;"><span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big>Simulation:<small><small><span style="font-weight: bold;"></span></small></small></big></big></span></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: left;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">Shown
+below are simulations using LTspice to demonstrate what a compensated
+probe does to a signal (Figure 4) compared to what no compensation
+looks like (Figure 5). The delay time was taken at 50% of the maximum
+voltage value for each signal displayed for the figures. However, the
+cursor placement does not allow for precise alignment. For Figure 4,
+the maximum output signal is approximately 0.09V. Therefore, a 10x
+compensation is needed to raise the value to 0.9V, which is the
+corresponding maximum voltage for the uncompensated probe. The delay
+time for the compensated probe was 742 nano seconds and 6.35 micro
+seconds for the uncompensated probe.<br>
+</font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><img style="width: 792px; height: 754px;" alt="" src="Images/Compensated.png"></font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">Figure 4: The schematic with simulation results for a compensated probe is shown.<br>
+</font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"><br>
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><img style="width: 792px; height: 754px;" alt="" src="Images/NonCompensated.png"></font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">Figure 5: The schematic with simulation results for a non-compensated probe is shown.</font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: left;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><br>
+</font></font></p>
+
+<span style="font-family: Comic Sans MS;"></span>
+<br>
+<span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big>Results:<br>
+</big></big></span>
+
+
+	
+	
+	
+	<font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><br>
+The experimenta</font></font><span style="font-family: Comic Sans MS;">l
+reading of voltage with respect to time are shown in Figures 6 through
+9. The delay time is supposed to be measured from 50% voltage for each
+of the signals. Hence, the cursor placement on the left is incorrect.
+The vertical cursor should be placed where voltage reads zero for
+Figures 6 through 9. The variable capacitance on the probe was altered
+to yield the minimum and maximum delay times: 4.255 micro seconds and
+6.655 micro seconds respectively. We could change the delay time by 2.4
+micro seconds by altering the internal capacitance. The delay time for
+the uncompensated probe was 13.7 micro seconds while the delay time for
+the compensated probe was 7.81 micro seconds. The compensated probe was
+5.89 micro seconds faster.<br>
+<br>
+</span>
+<div style="text-align: center;"><span style="font-family: Comic Sans MS;"><img style="width: 480px; height: 234px;" alt="" src="Images/Probe_Max_dt.png"></span><br>
+Figure 6: The capacitance of the probe was varied to give the maximum delay time.<br>
+<br>
+<span style="font-family: Comic Sans MS;"></span></div>
+<div style="text-align: center;"><span style="font-family: Comic Sans MS;"><img style="width: 480px; height: 234px;" alt="" src="Images/Probe_Min_dt.png"></span><br>
+Figure 7: The capacitance of the probe was varied to give the minimum delay time.<br>
+<br>
+<span style="font-family: Comic Sans MS;"></span></div>
+<div style="text-align: center;"><span style="font-family: Comic Sans MS;"><img style="width: 480px; height: 234px;" alt="" src="Images/1x_Capless_Probe.png"></span><br>
+Figure 8: The delay time of an uncompensated probe is shown.<br>
+<br>
+<span style="font-family: Comic Sans MS;"></span></div>
+<div style="text-align: center;"><span style="font-family: Comic Sans MS;"><img style="width: 480px; height: 234px;" alt="" src="Images/10x_Cap_Probe.png"></span><br>
+Figure 9: The delay time of a compensated probe is shown.<br>
+<span style="font-family: Comic Sans MS;"></span></div>
+<span style="font-family: Comic Sans MS;"><br>
+</span>
+<span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big>
+</big></big></span>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%;">
+ <font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">The
+capacitances measured for the probe are tabulated in Table 1 along with
+the capacitances attained from the delay time calculation.</font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><br>
+</font></font></p>
+<table style="text-align: left; width: 100px; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; font-weight: bold;"><br>
+      </td>
+      <td style="vertical-align: top; font-weight: bold; text-align: center;">Experimental Capacitance<br>
+      </td>
+      <td style="vertical-align: top; font-weight: bold; text-align: center;">Theoretical<br>
+Capacitance<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><span style="font-weight: bold;">Calculated Difference</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-weight: bold;">Minimum Delay <br>
+      </td>
+      <td style="vertical-align: top; text-align: right;">0.102 nF<br>
+      </td>
+      <td style="vertical-align: top; text-align: right;">.06245 nF<br>
+      </td>
+      <td style="vertical-align: top;">0.03955 nF<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-weight: bold;">Maximum Delay<br>
+      </td>
+      <td style="vertical-align: top; text-align: right;">0.132 nF<br>
+      </td>
+      <td style="vertical-align: top; text-align: right;">.09767 nF<br>
+      </td>
+      <td style="vertical-align: top;">0.03433 nF<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"><br>
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><br>
+</font></font></p>
+
+
+<br><br>
+<span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big>Discussion:</big></big></span><br>
+
+
+	
+	
+	
+	
+
+<p style="margin-bottom: 0.2in; line-height: 100%;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">It
+was determined that the use of a compensated probe decreases the
+delay time compared to use of a regular wire. It was determined that
+the delay time was decreased by 5.89 micro seconds. The capacitance
+of the probe was also measured at minimum and maximum compensation
+capacitances. These values were compared to capacitances attained by
+measuring the delay time in an RC circuit. The difference in values
+can be attributed to parasitic capacitance in the experimental setup.</font></font></p>
+<span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big>Appendix:</big></big></span><br>
+<br>
+I cannot figure out how to flip these images.<br>
+<br>
+<img style="width: 1200px; height: 898px;" alt="" src="Images/IMG_1675.jpg"><br>
+<img style="width: 1208px; height: 905px;" alt="" src="Images/IMG_1676.jpg"><br>
+<img style="width: 1213px; height: 908px;" alt="" src="Images/IMG_1677.jpg"><br>
+<img style="width: 1213px; height: 910px;" alt="" src="Images/IMG_1678.jpg"><br>
+<img style="width: 1220px; height: 913px;" alt="" src="Images/IMG_1679.jpg"><br>
+<img style="width: 1222px; height: 916px;" alt="" src="Images/IMG_1680.jpg"><br>
+
+</body>
+<!-- Mirrored from www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/StudentLabs/lschultz/Lab2/Lab2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2017 17:59:24 GMT -->
+</html>

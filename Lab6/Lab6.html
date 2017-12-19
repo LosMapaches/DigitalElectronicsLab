@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- Mirrored from www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/StudentLabs/lschultz/Lab6/Lab6.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2017 18:02:33 GMT -->
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title></title><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style></head><body style="color: rgb(0, 0, 0); background-color: rgb(255, 230, 204);" alink="#000099" link="#000099" vlink="#990099">
+<span style="font-family: Comic Sans MS;">ENGR338 Lab 2017
+Fall</span><span style="font-family: &quot;Comic Sans MS&quot;;"></span><br>
+
+<span style="font-family: Comic Sans MS;">
+Name:&nbsp; Lane Schultz<br>
+
+<br>
+
+</span>
+<div style="text-align: center;"><big style="font-weight: bold;"><big><big><span style="font-family: &quot;Comic Sans MS&quot;;">Lab 6: Adders</span></big></big></big><br>
+</div>
+
+<span style="font-family: Comic Sans MS;"></span><span style="font-family: Comic Sans MS;"></span><br>LTspice
+was used to build a 3-bit ripple-carry full adder. Unfortunately, a
+ripple-carry full adder is susceptible to glitches. The reason for
+this is the propagation delay between carry-out inputs and
+outputs. The carry signals need time to propagate through the
+circuitry.
+Below is a figure of a 3-bit ripple-carry full adder and 3-bit
+carry-look ahead adder along with the time responce of the carry bits
+and sums.<br>
+<br>
+<div style="text-align: center;">
+<div style="text-align: center;"><img style="width: 1227px; height: 563px;" alt="" src="Figures/DopePicYo.png"><br>
+</div>
+Figure 1: A schematic for a 3-bit ripple-carry full adder (left) and a
+3-bit carry-look ahead adder (right) is shown above with carry and sum
+time responces.<br>
+<br>
+<br>
+<div style="text-align: left;">As seen in Figure 1, the carry from c2
+has been prepared for a while before the sum takes place on the look
+ahead adder. This is not the case for the ripple carry adder. A glitch
+for the built schematic can be
+seen in the output on S2. The sudden downward spike on the square waves
+is the glitch. Unfortunately, slowing down the square wave by 10 times
+does not significantly aid the response of the circuit. There is a
+similar glitch present.<br>
+<br>
+<div style="text-align: center;"><img style="width: 922px; height: 438px;" alt="" src="Figures/glitch.png"><br>
+Figure 2: An example glitch for the ripple-carry adder is shown above.<br>
+<br>
+<div style="text-align: left;">The downwards spike that a ripple-carry
+adder experiences is less in a look-ahead adder. The look-ahead adder
+can predict whether a carry will be generated or not given the
+innitial inputs. This makes enables the circuit to operate faster. The
+slight drop
+in voltage experienced by the look-ahead adder is above the switching
+point; therefore, logic should not be effected.<br>
+<br>
+<div style="text-align: center;"><img style="width: 512px; height: 551px;" alt="" src="Figures/look.png"><br>
+Figure 3: Sample logic from a look-ahead adder is shown above. <a href="http://www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/Lab6_Adders/Lab6.html">Source</a><br>
+<br>
+<div style="text-align: left;">The electric circuit for a look-ahead
+adder was built. The truth table for the adder was mostly completed.
+Power to one of the OR chips on the board did notfunction properly. The
+incorrect value was at A2A1A0 = 101 and S2S1S0 = 101. Below is the
+truth table acquired in lab with the incorrect value changed to what it
+should be. <br>
+<br>
+<div style="text-align: center;">Table 1: The truth table for a 3-bit carry-look ahead adder.<br>
+</div>
+<div style="text-align: center;"><img style="width: 261px; height: 605px;" alt="" src="Figures/Table.png"><br>
+<big><big><br style="font-weight: bold;">
+</big></big>
+<div style="text-align: left;"><big><big><span style="font-weight: bold;">Derivation of logic below:</span></big></big><br>
+<br>
+<div style="text-align: center;"><img style="width: 978px; height: 1301px;" alt="" src="Figures/IMG_1754.jpg"><br>
+</div>
+<div style="text-align: center;"><img style="width: 989px; height: 1318px;" alt="" src="Figures/IMG_1755.jpg"><br>
+</div>
+<br>
+<div style="text-align: center;"><img style="width: 980px; height: 1306px;" alt="" src="Figures/IMG_1756.jpg"><br>
+
+</div>
+</div>
+
+ </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+<!-- Mirrored from www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/StudentLabs/lschultz/Lab6/Lab6.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2017 18:06:35 GMT -->
+</html>

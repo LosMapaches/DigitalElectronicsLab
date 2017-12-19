@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- Mirrored from www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/StudentLabs/lschultz/Lab4/Lab4.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2017 17:59:43 GMT -->
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title></title><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style></head><body style="color: rgb(0, 0, 0); background-color: rgb(255, 230, 204);" alink="#000099" link="#000099" vlink="#990099">
+<span style="font-family: Comic Sans MS;">ENGR338 Lab 2017
+Fall</span><span style="font-family: &quot;Comic Sans MS&quot;;"></span><br>
+
+<span style="font-family: Comic Sans MS;">
+Name:&nbsp; Lane Schultz<br>
+
+<br>
+
+</span>
+<div style="text-align: center;"><big style="font-weight: bold;"><big><big><span style="font-family: &quot;Comic Sans MS&quot;;">Lab 4: Logic Gates</span></big></big></big><br>
+</div>
+
+<span style="font-family: Comic Sans MS;"></span><span style="font-family: Comic Sans MS;"></span><br>
+An inveter with a capacitive load, a ring oscillator, a NAND gate, and
+a NOR gate were built. The inverterter with another transistor as a
+capacitive load was used to measture tPHL and tPLH. The load transistor
+was used for time measurements because the propagation delay would be
+the same between two transistors in a ring oscillator. This allows for
+the use of f=1/n*(tPHL+tPLH) for estimating the frequency of a 3-ring
+oscillator.&nbsp; A CD4007 chip was used. tPLH was found to be 20.0 ns
+and tPHL was found to be 16.4 ns. This gives a theoretical frequency of
+9.16 MHz. The following is the experimental measurements of tPHL and
+tPLH from the oscilloscope for the inverter:<br>
+<br>
+<div style="text-align: center;"><img style="width: 480px; height: 234px;" alt="" src="Images/TEK00000.png"><br>
+Figure 1: tPLH is shown above.<br>
+<br>
+</div>
+<div style="text-align: center;"><img style="width: 480px; height: 234px;" alt="" src="Images/TEK00001.png"><br>
+<br>
+Figure 2: tPHL is shown above.<br>
+</div>
+<br>
+Below is a sample diagram of a ring oscillator:<br>
+<br>
+<div style="text-align: center;"><img style="width: 569px; height: 350px;" alt="" src="Images/ring.jpg"><br>
+Figure 3: A ring oscillator using MOSFETs is shown above. <a href="http://www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/Lab4_LogicGates/Lab4.html">Source</a><br>
+</div>
+<br>The frequency of a 3-ring oscillator was found experimentally by
+measuring the time between peaks of voltage between the input and
+ouptut of an inverter. The frequency was found to be 9.09 MHz. The
+measured experimental frequency of 9.09 MHz differed from the
+theoretical frequency of 9.16 MHz by 0.0666 MHz. The following figure
+shows the oscilloscope view for peak measurement:<br>
+<br>
+<div style="text-align: center;"><img style="width: 480px; height: 234px;" alt="" src="Images/TEK00002.png"><br>
+Figure 4: The ring oscillator period mesurement is shown above.<br>
+</div>
+<br>
+Transistors can be used to perform boolean
+logic.&nbsp; The configurations of transistors explored in this
+laboratory are NAND and NOR gates. Sample circutiry is shown below:<br>
+<br>
+<div style="text-align: center;"><img style="width: 333px; height: 295px;" alt="" src="Images/Circuits.gif"><br>
+Figure 5: MOSFET configurations of NAND and NOR gates are shown above. <a href="../../../../../../../i.stack.imgur.com/9Dr6u.gif">Source</a><br>
+</div><br>
+The input and output voltage signals were compared for a 2-input NAND
+and NOR gates. The input to one of the two inputs is either fixed at 5V
+or at 0V. A 5Vpp, 1kHz squre wave was placed in the other input. The
+square wave was offset +2.5V.<br>
+<br>
+<div style="text-align: center;"><img style="width: 480px; height: 234px;" alt="" src="Images/TEK00003.png"><br>
+Figure 6: 5V constant input with a square wave on a NAND circuit.<br>
+<br>
+<div style="text-align: left;">The above figure shows the voltage
+output of a NAND gate with respect to a 5V input and a square wave
+input. When the square wave is high, the output was low. When the
+square wave was low, the output was high.<br>
+</div>
+</div>
+<br>
+<div style="text-align: center;"><img style="width: 480px; height: 234px;" alt="" src="Images/TEK00004.png"><br>
+Figure 7: 0V constant input with a square wave on a NAND circuit.<br>
+<br>
+<div style="text-align: left;">The above figure shows the voltage ouput
+of a NAND gate with respect to a 0V input and a square wave input. When
+the square wave is high, the output was high. When the square wave was
+low, the output was high. The previous two figures are consistent with
+a two input NAND gate truth table shown below:<br>
+<br>
+<table style="text-align: left; width: 100px; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">A<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">B<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">Out<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">0<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">0<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">1<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">0<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">1<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">1<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">1<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">0<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">1<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">1<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">1<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">0<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div style="text-align: center;"><br>
+</div>
+<br>
+</div>
+</div>
+<div style="text-align: center;"><img style="width: 480px; height: 234px;" alt="" src="Images/TEK00005.png"><br>
+Figure 8: 5V constant input with a square wave on a NOR circuit.<br>
+<br>
+<div style="text-align: left;">The above figure shows the voltage output of a NOR gate with respect
+to a 5V input and a square wave input. When the square wave is high,
+the output was low. When the square wave was low, the output was low.</div>
+<br>
+</div>
+<div style="text-align: center;"><img style="width: 480px; height: 234px;" alt="" src="Images/TEK00006.png"><br>
+Figure 9: 0V constant input wiht a square wave on a NOR circuit.<br>
+<br>
+<div style="text-align: left;">The above figure shows the voltage ouput of a NOR gate with respect to
+a 0V input and a square wave input. When the square wave is high, the
+output was low. When the square wave was low, the output was high. The
+previous two figures are consistent with a two input NOR gate truth
+table shown below:<br>
+<br>
+<br>
+<table style="text-align: left; width: 100px; height: 154px; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">A<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">B<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">Out<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">0<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">0<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">1<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">0<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">1<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">0<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">1<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">0<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">0<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">1<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">1<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">0<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div style="text-align: center;"><br>
+</div>
+</div>
+</div>
+<span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big><big>
+</big></big></big></span>
+
+</body>
+<!-- Mirrored from www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/StudentLabs/lschultz/Lab4/Lab4.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2017 17:59:53 GMT -->
+</html>

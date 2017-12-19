@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- Mirrored from www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/StudentLabs/lschultz/Lab5/Lab5.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2017 17:59:54 GMT -->
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title></title><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style></head><body style="color: rgb(0, 0, 0); background-color: rgb(255, 230, 204);" alink="#000099" link="#000099" vlink="#990099">
+<span style="font-family: Comic Sans MS;">ENGR338 Lab 2017
+Fall</span><span style="font-family: &quot;Comic Sans MS&quot;;"></span><br>
+
+<span style="font-family: Comic Sans MS;">
+Name:&nbsp; Lane Schultz<br>
+
+<br>
+
+</span>
+<div style="text-align: center;"><big style="font-weight: bold;"><big><big><span style="font-family: &quot;Comic Sans MS&quot;;">Lab 5: Seven Segment Display</span></big></big></big><br>
+</div>
+
+<span style="font-family: Comic Sans MS;"></span><span style="font-family: Comic Sans MS;"></span><br>
+A seven segment display was used in this laboratory to display digits 0
+through 9. A dot diode was used to ensure proper orientation of the
+number. Resistors of 390 Ohms were connected to each pin of the <a href="http://www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/Lab5-SevenSegmentDiap/LSHD5503.pdf">SSD (LSHD5503)</a>
+display to limit current. This prevents burning out a diode. The com
+terminals of the display were connected to ground through resistors.
+The other pins were connected to a 3V power supply or left open to
+attain the displays shown below. <br>
+<br>
+<br>
+<div style="text-align: center;"><img style="width: 1064px; height: 563px;" alt="" src="Images/AllConnections.png"><br>
+Figure 1: Displays attained by controlling 7 inputs to the display chip is shown above.<br>
+<br>
+<br>
+<div style="text-align: left;">Each diode requires a certain amount of
+voltage before segments become visible. This relationship can be
+understood with a current and voltage relationship. Below is the
+manufacturer forward IV characteristics for the chip used.<br>
+</div>
+<br>
+<br>
+<img style="width: 315px; height: 359px;" alt="" src="Images/diodeIV.jpg"><br>
+Figure 2: The manufacturer specifications for current versus voltage is shown above.<br>
+<br>
+<div style="text-align: left;">The IV characteristics for one diode
+within the chip was measured by altering the voltage across the chip
+and measuring the current. The experimental results differed from the
+manufacturer specifications. One possible reason for this discrepancy
+where the resistors used. The manufacturer most likely did not use a
+resistor in series to measure IV characteristics. The figure below was
+attained by altering the voltage across a diode from 0V to 3V by
+increments of 0.3V.<br>
+</div>
+<br>
+<img style="width: 891px; height: 661px;" alt="" src="Images/IV.png"> <br>
+Figure 3: The experimentally attained IV characteristics of a diode is shown above.<br>
+<br>
+<div style="text-align: left;">The number of pins that need to be controlled can be decreased by using a decoder (<a href="http://www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/Lab5-SevenSegmentDiap/M74HC4543.pdf">M74HC4543</a>).
+The previous displays were attained by changing 7 pins from high to low
+and vice versa. With a decoder, the same number of displays can be
+attained by altering the connection of pins A-D of the decoder.<br>
+</div>
+<br>
+</div>
+<div style="text-align: center;"><img style="width: 1065px; height: 502px;" alt="" src="Images/FourConnections.png"><br>
+Figure&nbsp; 4: Displays attained by using a decoder are shown above.<span style="font-family: Comic Sans MS;"></span></div>
+</body>
+<!-- Mirrored from www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/StudentLabs/lschultz/Lab5/Lab5.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2017 18:02:33 GMT -->
+</html>

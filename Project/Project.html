@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- Mirrored from www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/StudentLabs/lschultz/Project/Project.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2017 18:22:44 GMT -->
+<head>
+
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title></title>
+  
+
+  
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="generator" content="LibreOffice 5.1.6.2 (Linux)">
+
+  
+  <style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="generator" content="LibreOffice 5.1.6.2 (Linux)">
+
+  
+  <style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="generator" content="LibreOffice 5.1.6.2 (Linux)">
+
+  
+  <style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="generator" content="LibreOffice 5.1.6.2 (Linux)">
+
+  
+  <style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }</style>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="generator" content="LibreOffice 5.1.6.2 (Linux)">
+
+  
+  <style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="generator" content="LibreOffice 5.1.6.2 (Linux)">
+
+  
+  <style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style></head><body style="color: rgb(0, 0, 0); background-color: rgb(255, 230, 204);" alink="#000099" link="#000099" vlink="#990099">
+<span style="font-family: Comic Sans MS;">ENGR338 Lab 2017
+Fall</span><span style="font-family: &quot;Comic Sans MS&quot;;"></span><br>
+
+<span style="font-family: Comic Sans MS;">
+Name:&nbsp; Lane Schultz<br>
+<br>
+</span>
+<div style="text-align: center;"><big style="font-weight: bold;"><big><big><span style="font-family: &quot;Comic Sans MS&quot;;">FPGA Project: Stopwatch</span></big></big></big><br>
+</div>
+
+<span style="font-family: Comic Sans MS;"></span><br>
+
+<big><span style="font-weight: bold;">Abstract</span></big><br>
+
+<br>
+
+A field-programmable gate array (FPGA) was used to program a stopwatch
+with Verilog scripts. The stop watch can count from zero to nine at the
+following frequencies: 100 Hz, 10 Hz, 1 Hz, and 0.1 Hz. For counting to
+work, the counting numbers of different frequencies where switched
+between displays. The final design is capable of counting from zero to
+99.99 seconds before resetting. The functions of stopping and resetting
+the count were also implemented.<br>
+
+<br>
+
+<big style="font-weight: bold;">Introduction</big><br>
+
+<br>
+
+A Basys 3 FPGA was used to program a stopwatch. The FPGA has a four
+segment display. Each display can be turned on and off with a four bit,
+binary number as shown on the wire diagram below. From right to
+left, the programmed FPGA counted from zero to nine at the following respective frequencies: 100 Hz, 10 Hz, 1 Hz, and 0.1 Hz.<br>
+
+<br>
+
+<div style="text-align: center;"><img style="width: 340px; height: 489px;" alt="" src="Figures/Wires.html"><br>
+Figure 1: The wire diagram for the Basys 3 FPGA is shown above [<a href="http://www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/Lab10_MoreFPGA/Lab10.html">Source</a>].<br>
+</div>
+
+<br>
+Each light emitting diode (LED) on the FPGA can be controlled by a
+seven bit, binary number. The LED segments that control which number is
+displayed is shown below. However, the same number appears on all
+displays for a given time. Hence, rapid switching between displays is
+needed for different numbers to be displayed.<br>
+
+<br>
+
+<div style="text-align: center;"><img style="width: 362px; height: 241px;" alt="" src="Figures/LED.html"><br>
+Figure 2: The wire diagram for the LED's on the Basys 3 FPGA is shown
+above [<a href="http://www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/Lab10_MoreFPGA/Lab10.html">Source</a>].<br>
+</div>
+
+<br>
+
+<big><span style="font-weight: bold;">Materials and Methods</span></big><br>
+
+<br>
+Three scripts were written: <a href="Files/StopWatch.html">StopWatch.v</a>, <a href="Files/Switching.html">Switching.v</a>, and <a href="Files/TestBenchStopWatch.html">TestBenchStopWatch.v</a>. The constraints file is <a href="Files/Basys3_Master.html">Basys3_Master.xdc</a>. The <a href="Files/StopWatch.html">StopWatch.v</a><span style="text-decoration: underline;"></span> script controls the rate of counting for an individual
+display on the stopwatch. The input parameters include a maximum count
+that controls the rate at which counting occurs, a start condition, a
+stop condition, a reset condition, and the internal counter of the
+FPGA. Within the script there exists a multiplexer that uses a case
+argument to switch between active LED segments. The active LED segment is the output.<br>
+<br>
+The <a href="Files/Switching.html">Switching.v</a> script controls which
+of the displays is active. Several conditionals were used to switch
+between displays sequentially. Four counters were used. When each
+counter reaches the corresponding maximum number, its corresponding
+display is selected. The frequency at which switching occurs was at a
+rate the human eye cannot resolve. Inputs include the internal counter
+of the FPGA and segment data from <a href="Files/StopWatch.html">StopWatch.v</a>.&nbsp; The output is the active display with the corresponding active LED's.<br>
+<span style="font-weight: bold;"></span><br>
+<a href="Files/TestBenchStopWatch.html">TestBenchStopWatch.v</a> was used to wire the <a href="Files/StopWatch.html">StopWatch.v</a> to <a href="Files/Switching.html">Switching.v</a> with different maximum counts for <a href="Files/StopWatch.html">StopWatch.v</a>
+to count at different frequencies. Within this script the triggers for
+starting, stopping, and reset were connected to the up, center, and
+down buttons for the FPGA.&nbsp; The outputs are the active display and
+the corresponding active LED sequence. This script also used the
+internal clock of the FPGA. All scripts are shown in the appendix and
+can be downloaded.<br>
+
+<br>
+
+<big><span style="font-weight: bold;">Results</span></big><br>
+
+<br>
+
+Below is the result for the programmed FPGA. The stopwatch can count
+from 00.00 until 99.99 seconds before resetting. The stopwatch starts
+at a stopped position and can be reset when stopped and when running.<br>
+
+<br>
+
+<br>
+
+<div align="center">
+<video width="400" height="300" position="center" controls="" src="Videos/StopWatch.mp4" type="video/mp4"></video><br>
+</div>
+
+<big><span style="font-weight: bold;">Discussion</span></big><br>
+
+<br>
+The built scripts primarily used loops with conditionals to switch
+between conditions. Shifting could be implemented to simplify future
+versions of the scripts. For instance, the multiplexer input portion of
+<a href="Files/StopWatch.html">StopWatch.v</a> could be represented by a
+sequence of binary numbers that shift to set another number active. A
+similar process could be used for the active displays in <a href="Files/Switching.html">Switching.v</a>. However, the current scripts perform as expected for the 100 Hz to 0.1 Hz of counting.<br>
+
+<br>
+
+<big><span style="font-weight: bold;">References</span></big><br>
+
+<a href="http://yilectronics.com/">yilectronics.com</a><br>
+
+<br>
+
+<big><span style="font-weight: bold;">Appendix</span></big><a href="Files/Files.7z"><span style="font-weight: bold;"><br>
+</span></a><big><big><big><a href="Files/Files.7z"><small><small>Download
+Code</small></small></a><br>
+</big></big></big><big><big><big><a href="Videos/StopWatch.mp4"><small><small>Download Video (Right click on video and click Save Video As...)</small></small></a></big></big></big><br>
+<big><big><big><span style="font-weight: bold;">
+<br>
+</span></big></big></big>
+<div style="text-align: center;"><big><big><big><span style="font-weight: bold;"></span></big></big></big><img style="width: 510px; height: 660px;" alt="" src="Figures/StopWatch-1.png"><br>
+<img style="width: 510px; height: 660px;" alt="" src="Figures/StopWatch-2.png"><br>
+Figure: The script StopWatch.v is shown above.<br>
+<br>
+<img style="width: 510px; height: 660px;" alt="" src="Figures/Switching-1.png"><br>
+<img style="width: 510px; height: 660px;" alt="" src="Figures/Switching-2.png"><br>
+Figure: The script Switching.v is shown above.<br>
+<br>
+<img style="width: 510px; height: 660px;" alt="" src="Figures/TestBenchStopWatch-1.png"><br>
+<img style="width: 510px; height: 660px;" alt="" src="Figures/TestBenchStopWatch-2.png"><br>
+Figure: The TestBenchStopWatch script is shown above.<br>
+<big><big><big><span style="font-weight: bold;"></span></big></big></big></div>
+
+<big><big><big><span style="font-weight: bold;"></span></big></big></big>
+<br>
+
+<br>
+</body>
+<!-- Mirrored from www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/StudentLabs/lschultz/Project/Project.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2017 18:25:48 GMT -->
+</html>

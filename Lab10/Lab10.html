@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- Mirrored from www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/StudentLabs/lschultz/Lab10/Lab10.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2017 18:11:42 GMT -->
+<head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title></title>
+
+  
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="generator" content="LibreOffice 5.1.6.2 (Linux)">
+
+  
+  <style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="generator" content="LibreOffice 5.1.6.2 (Linux)">
+
+  
+  <style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="generator" content="LibreOffice 5.1.6.2 (Linux)">
+
+  
+  <style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="generator" content="LibreOffice 5.1.6.2 (Linux)">
+
+  
+  <style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }</style>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="generator" content="LibreOffice 5.1.6.2 (Linux)">
+
+  
+  <style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="generator" content="LibreOffice 5.1.6.2 (Linux)">
+
+  
+  <style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style>
+</head><body style="color: rgb(0, 0, 0); background-color: rgb(255, 230, 204);" alink="#000099" link="#000099" vlink="#990099">
+<span style="font-family: Comic Sans MS;">ENGR338 Lab 2017
+Fall</span><span style="font-family: &quot;Comic Sans MS&quot;;"></span><br>
+
+<span style="font-family: Comic Sans MS;">
+Name:&nbsp; Lane Schultz<br>
+<br>
+</span>
+<div style="text-align: center;"><big style="font-weight: bold;"><big><big><span style="font-family: &quot;Comic Sans MS&quot;;">Lab 10: More About FPGA</span></big></big></big><br>
+</div>
+
+<span style="font-family: Comic Sans MS;"></span><br>
+
+<big><big><big><span style="font-weight: bold;">Part 1:</span></big></big></big><br>
+
+<br>
+
+<big style="font-weight: bold;"><big>OR:</big></big><br>
+
+<br>
+
+<span style="font-weight: bold;">Simulation:</span><br>
+
+<br>
+
+For OR logic, either or both inputs have to be on for the output to be
+high. The output will be low otherwise.<br>
+
+<br>
+
+<div style="text-align: center;"><img style="width: 998px; height: 109px;" alt="" src="figures/SimOR.png"><br>
+Figure: OR logic on a simulation is shown.<br>
+</div>
+
+<br>
+
+<span style="font-weight: bold;">FPGA:</span><br>
+
+OR gate logic was shown on the FPGA. If both input switches are off,
+then LED 0 will be off. If either or both input switches are on, then
+LED 0 will turn on.<br>
+
+<br>
+
+<div style="text-align: center;"><img style="width: 829px; height: 591px;" alt="" src="figures/OR.png"><br>
+Figure: OR logic on an FPGA is shown.<br>
+</div>
+
+<br>
+
+<big style="font-weight: bold;"><big>XOR:</big></big><br>
+
+<br>
+
+<span style="font-weight: bold;">Simulation:</span><br>
+
+<br>
+
+When both inputs are low, the output will be low. When either input is
+high and the other is low, then the output will be high. If both inputs
+are low, then the output is high.<br>
+
+<br>
+
+<div style="text-align: center;"><img style="width: 1001px; height: 107px;" alt="" src="figures/SimXOR.png"><br>
+Figure: XOR logic on a simulation is shown.<br>
+</div>
+
+<br>
+
+<span style="font-weight: bold;">FPGA:</span><br>
+
+XOR logic was displaced using an FPGA. The only logic that resulst in
+LED 0 to be on is for one switch to be on while the other is off. If
+both switches are in the state of on or off, then LED 0 will be off.<br>
+
+<br>
+
+<div style="text-align: center;"><img style="width: 836px; height: 625px;" alt="" src="figures/XOR.png"><br>
+Figure:&nbsp; XOR logic on an FPGA is shown.
+</div>
+
+<br>
+
+<big style="font-weight: bold;"><big>Inverter:</big></big><br>
+
+<br>
+
+<span style="font-weight: bold;">Simulation:</span><br>
+
+<br>
+
+If the input is high, the output will be low and vice versa.<br>
+
+<br>
+
+<div style="text-align: center;"><img style="width: 999px; height: 83px;" alt="" src="figures/SimInverter.png"><br>
+Figure: Inverter logic on a simulation is shown.<br>
+</div>
+
+<br>
+
+<span style="font-weight: bold;">FPGA:</span><br>
+
+Inverter logic was displayed on an FPGA. If a programmed switch is off,
+then LED 0 will be on and vice versa.<br>
+
+<br>
+
+<div style="text-align: center;"><img style="width: 841px; height: 277px;" alt="" src="figures/Inverter.png"><br>
+Figure: Inverter logic on an FPGA is shown.
+</div>
+
+<br>
+
+<big style="font-weight: bold;"><big>2-Bit Full Adder:</big></big><br>
+
+<br>
+
+<span style="font-weight: bold;">Simulation:</span><br>
+
+<br>
+
+For adding, if there is no input then the sum and carry will be low. If
+one input is high and the other is low, then the sum will be high and
+the carry will be low. If both inputs are high, then the carry will be
+high while the sum will be low.<br>
+
+<br>
+
+<div style="text-align: center;"><img style="width: 1000px; height: 156px;" alt="" src="figures/SimAdder.png"><br>
+Figure: Adding logic on a simulation is shown.<br>
+</div>
+
+<br>
+
+<span style="font-weight: bold;">FPGA:</span><br>
+
+Logic for adding in binary was shown on an FPGA. If all switches are
+off, then all lights will be off. If one switch is on, then the
+summation is indicated by LED 0. If both switches are on, then there
+will be a carry indicated by LED 1.<br>
+
+<br>
+
+<div style="text-align: center;"><img style="width: 834px; height: 577px;" alt="" src="figures/Adder.png"><br>
+Figure: Adding logic on an FPGA is shown.
+</div>
+
+<br>
+
+<big style="font-weight: bold;"><big>8-Input AND:</big></big><br>
+
+<br>
+
+<span style="font-weight: bold;">Simulation:</span><br>
+
+<br>
+
+For the output to be high, all inputs have to be high. For any other
+combination, the output will be low.<br>
+
+<br>
+
+<div style="text-align: center;"><img style="width: 994px; height: 246px;" alt="" src="figures/SimAND.png"><br>
+FigureAND logic on a simulation is shown.<br>
+</div>
+
+<br>
+
+<span style="font-weight: bold;">FPGA:</span><br>
+
+The low value will dominate in AND logic. The only way for an led light
+to be on is for all programed switches to be on. If a single switch is
+in the off state, then LED 0 will be off.<br>
+
+<br>
+
+<div style="text-align: center;"><img style="width: 843px; height: 562px;" alt="" src="figures/AND.png"><br>
+Figure: AND logic on an FPGA is shown.
+</div>
+
+<big style="font-weight: bold;"><big><br>
+4-1 MUX:</big></big><br>
+
+<br>
+
+<span style="font-weight: bold;">Simulation:</span><br>
+
+<br>
+
+S0 and S1 (Figure below) can be used to control which of the inputs
+goes to the output. For a more detailed explanation, read the FPGA
+description.<br>
+
+<br>
+
+<div style="text-align: center;"><img style="width: 999px; height: 200px;" alt="" src="figures/SimMUX.png"><br>
+Figure: MUX logic on a simulation is shown.<br>
+</div>
+
+<br>
+
+<span style="font-weight: bold;">FPGA:</span><br>
+
+A 4-1 MUX was programmed into an FPGA. Two switches (switches 4 and 5)
+were used to display wheter or not a switch is on. When the switch 4
+and 5 are off, the output LED 0 shows the state of switch 0. When
+switch 4 is on and switch 5 is off, the state of switch 1 is shown.
+When switch 4 is off and switch 5 is on, then the state of switch 2 is
+shown. When both switch 4 and 5 are on, the state of switch 3 is shown.<br>
+
+<br>
+
+<div style="text-align: center;"><img style="width: 1014px; height: 455px;" alt="" src="figures/MUX.png"><br>
+Figure: MUX logic on an FPGA is shown. </div>
+
+<br>
+
+<big style="font-weight: bold;"><big><big>Part 2:</big></big></big><br>
+
+Time alternating leds where programmed into an FPGA. The function is
+shown in the video below:<br>
+
+<br>
+
+<div align="center">
+<video width="800" height="300" position="center" controls="" src="runningled.mp4" type="video/mp4"></video></div>
+
+<br>
+
+<br>
+
+<big style="font-weight: bold;"><big><big>Part 3:</big></big></big><br>
+
+An FPGA was used to program the four seven segment displays. The
+numbers zero through 9 where displayed by a combination of switches.
+The results are below:<br>
+
+<br>
+
+<br>
+
+<div style="text-align: center;"><img style="width: 1168px; height: 618px;" alt="" src="figures/FourCounter.png"><br>
+Figure: Four seven segment displays used to display numbers zero
+through 9 is shown above.<br>
+<br>
+<div style="text-align: left;">Numbers zero through 9 where displayed
+on one seven segment display. The results are shown below:<br>
+<br>
+</div>
+</div>
+
+<div style="text-align: center;">
+<div style="text-align: center;"><img style="width: 1166px; height: 595px;" alt="" src="figures/OneCounter.png"><br>
+</div>
+Figure: One seven segment displays used to display numbers zero through
+9 is shown above.<br>
+<br>
+<br>
+<div style="text-align: left;"><big style="font-weight: bold;"><big><big>Conclusion:</big></big></big><br>
+There were three main portions of this laboratory. The first segment
+consisted of displaying OR, XOR, inverter, 2-bit adding, 8-input AND,
+and 4-1 MUX logic in simulation and on an FPGA. For the second portion
+of the laboratory, four led lights were controlled. The lights were
+programmed to turn on or off in a sequential manner. The last portion
+of this laboratory dealt with displaying the numbers zero through 9 on
+seven segment displays. The number that was displayed was controlled
+with switches. The numbers were displayed on four displays and one
+display.<br>
+<br>
+</div>
+<div style="text-align: left;"><big style="font-weight: bold;"><big><big>Appendix:</big></big></big><br>
+<br>
+<a href="Code.tar.gz">Click to download code.</a><br>
+</div>
+</div>
+
+</body>
+<!-- Mirrored from www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/StudentLabs/lschultz/Lab10/Lab10.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2017 18:22:44 GMT -->
+</html>

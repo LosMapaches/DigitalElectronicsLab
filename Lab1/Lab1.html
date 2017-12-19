@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- Mirrored from www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/StudentLabs/lschultz/Lab1/Lab1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2017 17:55:22 GMT -->
+<head>
+
+
+
+
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title></title><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }</style><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"><style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style></head><body style="color: rgb(0, 0, 0); background-color: rgb(255, 230, 204);" alink="#000099" link="#000099" vlink="#990099">
+<span style="font-family: Comic Sans MS;">ENGR338 Lab 2017
+Fall</span><span style="font-family: &quot;Comic Sans MS&quot;;"></span><br>
+
+<span style="font-family: Comic Sans MS;">
+Name:&nbsp; Lane Schultz<br>
+
+<br>
+
+</span>
+<div style="text-align: center;"><big style="font-weight: bold;"><big><big><span style="font-family: &quot;Comic Sans MS&quot;;">Lab 1: Spice/RC Circuit for Digital Signal</span></big></big></big><br>
+</div>
+
+<span style="font-family: Comic Sans MS;"><br>
+<big style="font-weight: bold;"><big>Abstract:</big></big><br>
+</span>
+
+
+	
+	
+	
+	
+
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%;">
+
+
+
+	
+	
+	
+	
+
+</p><p style="margin-bottom: 0in; font-weight: normal; line-height: 100%;">
+<font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">The
+charge of voltage across a capacitor is not instantaneous in an
+electric circuit. There is an associated delay in time for a
+capacitor to reach a certain voltage. Hence, the times for the
+voltage across a capacitor to reach 50% of the input voltage (delay
+time) was determined. The delay time of three RC circuits were taken
+with theoretical calculations, simulation via LTspice, and&nbsp; an
+experiment. Each RC circuit had a 500 ohm resistor. The capacitors used
+were 229 pF, 363 pF, and 482 pF in capacitance. Theoretical
+calculations yielded a delay time of 79.4 ns, 126 ns, and 167 ns.
+Simulation results yielded delay times of 79.1 ns, 126 ns, and 168
+ns. Experimental results yielded delay times of 72 ns, 148 ns, and
+156 ns. Increasing delay time corresponds to an increase in
+capacitance. Quantifying the delay time of a circuit is useful to
+understand how a capacitor charges with respect to an input voltage.</font></font></p>
+
+<span style="font-family: Comic Sans MS;"><br>
+</span><span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big>Introduction:<small><small><span style="font-weight: bold;"></span></small></small></big></big></span><br>
+
+
+
+	
+	
+	
+	
+
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%;">
+<font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">Practical
+electronic circuits experience impedance from various sources. Some
+sources of impedance are difficult to account for because of defects
+and/or environmental factors while others are a function of desired
+components. Impedance can alter the time response
+of a system. Hence, it is useful to define a metric for the delay
+time of a circuit. In this laboratory, we define the delay time of a
+circuit to be the time that it takes for the voltage drop across a
+capacitor of an circuit to be 50% of the input voltage. The circuit
+analyzed consists of a resistor and a capacitor (RC circuit). For a
+circuit shown in Figure 1, a generic formula can be used to define the
+delay time with respect to components used.<br>
+</font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%;"><br>
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><img style="width: 699px; height: 450px;" alt="" src="Images/circuit.png"></font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;">Figure 1: An example of an RC circuit is shown.<br>
+</p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: left;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">In the circuit shown in Figure 1, the following relationship can be used to define the delay time theoretically:</font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: left;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><br>
+</font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: center;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><big><big>t=-RCln(0.5)</big></big><br>
+</font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: left;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><br>
+</font></font></p>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; text-align: left;"><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">In the previous equation, R represents the resistance, C is the capacitance, and t is the delay time.<br>
+</font></font></p>
+
+<br>
+<span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big><small><small><span style="font-weight: bold;"></span></small></small></big></big><big style="font-weight: bold;"><big>Equipment:</big></big><br>
+
+</span>
+<ul>
+  <li>Function Generator</li>
+  <li>Oscilloscope</li>
+  <li>Breadboard</li>
+  <li>LTspice</li>
+  <li>Resistor: 500 ohms<span style="color: rgb(34, 34, 34); font-family: Roboto,arial,sans-serif; font-size: small; font-style: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"></span></li>
+  <li>Capacitors: 229 pF, 363 pF, and 482 pF<br>
+  </li>
+</ul>
+<span style="font-family: Comic Sans MS;"><br>
+
+<big style="font-weight: bold;"><big>Procedure:<br>
+</big></big><br>
+A square wave with a peak-to-peak voltage of 2 volts and a frequency of 1 kHz was used to find the delay time of RC circuits.</span>
+The general schematic shown in Figure 1 was used. The resistor was
+fixed at a value of 500 ohms. Capacitors of 229 pF, 363 pF, and 482 pF
+were used.<br>
+<br>
+<span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big>Results:<br>
+</big></big></span>
+
+
+	
+	
+	
+	<font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><br>
+The experimenta</font></font><span style="font-family: Comic Sans MS;">l and simulation reading of voltage with respect to time are shown in Figures 2 through 7.<br>
+&nbsp;<br>
+
+</span>
+<div style="text-align: center;"><span style="font-family: Comic Sans MS;"><img style="width: 782px; height: 380px;" alt="" src="Images/TEK00002.png"></span><br>
+Figure 2: The oscilloscope display of the 229 pF capacitor circuit is shown.<br>
+<br>
+<span style="font-family: Comic Sans MS;"></span></div>
+<span style="font-family: Comic Sans MS;">
+</span>
+<div style="text-align: center;"><span style="font-family: Comic Sans MS;"><img style="width: 784px; height: 349px;" alt="" src="Images/1.png"></span><br>
+Figure 3: The simulation display of the 229 pF capacitor circuit is shown.<br>
+<br>
+<span style="font-family: Comic Sans MS;"></span></div>
+<span style="font-family: Comic Sans MS;">
+</span>
+<div style="text-align: center;"><span style="font-family: Comic Sans MS;"><img style="width: 783px; height: 382px;" alt="" src="Images/TEK00001.png"></span><br>
+Figure 4: The oscilloscope display of the 363 pF capacitor circuit is shown.<br>
+<br>
+<span style="font-family: Comic Sans MS;"></span></div>
+<span style="font-family: Comic Sans MS;">
+</span>
+<div style="text-align: center;"><span style="font-family: Comic Sans MS;"><img style="width: 786px; height: 347px;" alt="" src="Images/2.png"></span><br>
+Figure 5: The simulation display of the 363 pF capacitor circuit is shown.<br>
+<br>
+<span style="font-family: Comic Sans MS;"></span></div>
+<span style="font-family: Comic Sans MS;">
+</span>
+<div style="text-align: center;"><span style="font-family: Comic Sans MS;"><img style="width: 783px; height: 377px;" alt="" src="Images/TEK00003.png"></span><br>
+Figure 6: The oscilloscope display of the 482 pF capacitor circuit is shown.<br>
+<br>
+<span style="font-family: Comic Sans MS;"></span></div>
+<span style="font-family: Comic Sans MS;">
+</span>
+<div style="text-align: center;"><span style="font-family: Comic Sans MS;"><img style="width: 788px; height: 349px;" alt="" src="Images/3.png"></span><br>
+Figure 7: The simulation display of the 482 pF capacitor circuit is shown.<br>
+<span style="font-family: Comic Sans MS;"></span></div>
+<span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big><br>
+</big></big></span>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%;">
+ <font face="Comic Sans MS"><font style="font-size: 12pt;" size="3">The delay times of a circuit are tabulated in Table 1.<br>
+</font></font></p>
+
+<br>
+
+<table style="text-align: left; width: 100%; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top; font-weight: bold; text-align: center;">229 pF<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><span style="font-weight: bold;">363 pF</span><br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><span style="font-weight: bold;">482 pF</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Theoretical</span><br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">79.4 ns<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">126 ns<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">167 ns<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Simulation</span><br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">79.1 ns<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">126 ns<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">168 ns<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Experimental</span><br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">72.0 ns<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">148 ns<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">156 ns<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="text-align: center;"><span style="font-family: Comic Sans MS;">Table 1: The delay times for three RC circuits are tabulated.</span></div>
+<br>
+The percent differences were taken using the theoretical values for comparison. Table 2 contains the percent differences.<br>
+<br>
+<table style="text-align: left; width: 1292px; height: 100px; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; font-weight: bold; text-align: left;"><br>
+      </td>
+      <td style="vertical-align: top; font-weight: bold; text-align: center;">229 pF</td>
+      <td style="vertical-align: top; text-align: center;"><span style="font-weight: bold;">363 pF</span></td>
+      <td style="vertical-align: top; text-align: center;"><span style="font-weight: bold;">482 pF</span></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Simulation</span></td>
+      <td style="vertical-align: top; text-align: center;">0.38 %<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">0.00 %<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">0.60 %<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Experimental</span></td>
+      <td style="vertical-align: top; text-align: center;">9.32 %<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">17.5 %<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">6.59 %<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div style="text-align: center;">Table 2: Percent differences from theoretical calculations are tabulated.<br>
+</div>
+<br>
+<span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big>Discussion:<br>
+</big></big></span><font face="Comic Sans MS"><font style="font-size: 12pt;" size="3"><br>
+Each method of determining the delay time yielded similar values. </font></font>
+
+
+There was less of a discrepancy between theoretical values and
+simulation values compared to theoretical values and experimental
+values. The larger percent differences for experimental values can be
+explained by non-ideal component characteristics. The characteristics
+of a circuit depend on the thermal properties, connections, and changes
+between material types in a circuit. Theoretical and simulation values
+differed negligibly. This difference can be accounted for by incorrect
+cursor placement in simulation measurements. It is worthy of note that the larger the capacitance, the longer the delay time.<br>
+<br>
+<span style="font-family: Comic Sans MS;"><big style="font-weight: bold;"><big>
+
+Conclusion:</big></big></span><br>
+<br>
+The rise time of three RC circuits with different resistors were
+determined theoretically, experimentally, and via simulation. The
+percent differences were negligible between theoretical and simulation
+values. The percent difference between experimental and theoretical
+values were found to be 9.32 %, 17.5 %, and 6.56 % for the 229 pF, 363 pF,
+and 482 pF capacitors respectively. The percent difference can be
+reduced by incorporating thermal and material characteristics of
+components into simulation and theoretical calculations.<br>
+
+</body>
+<!-- Mirrored from www.yilectronics.com/Courses/ENGR338L/ENGR338L_2017f/StudentLabs/lschultz/Lab1/Lab1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2017 17:55:26 GMT -->
+</html>
